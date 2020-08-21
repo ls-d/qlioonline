@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
 
@@ -141,18 +141,21 @@
               <!--NOMBRE-->
               <label for="name">NOMBRE</label>
               <input type="text" placeholder="Nombre"><br>
-              <!--EMAIL-->
+              <!--EMAIL, TELEFONO, MENSAJE-->
               <label for="email">CORREO</label>
               <input type="email" placeholder="Ej:micorreo@correo.com"><br>
               <label for="phone">TELEFONO</label>
               <input type="number" placeholder="6182117333"><br>
               <label for="message">MENSAJE </label>
-              <input type="text" placeholder="Cuentanos qué necesitas"><br>
+              <textarea name="Mensaje" rows="4" class="form-control" placeholder="Escribe tu mensaje"></textarea><br>
+              <!-- BOTON SUBIR ARCHIVO-->
               <label class="custom-file-upload">Subir Archivo
                 <input type="file"/></label><br>
-              <input type="button" value="Enviar">
-              
-              
+              <!-- BOTON ENVIAR -->
+              <!--<input type="button" value="Enviar">-->
+              <div class="form-group">
+                  <button class="btn bt-succes btn-block">Envíar</button>
+              </div>           
             </form>
             <p>
               <span>Nuestro horario de oficina es de Lunes a Viernes de 10:00 a.m. a 2:00 p.m. y de 4:00 p.m. a 8:00 p.m. Nos encontramos en Durango, Dgo. Estamos ansiosos por conocerte, no dudes en contactarnos para resolver tus dudas</span>
