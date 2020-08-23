@@ -13,7 +13,8 @@ router.post('/add', async (req, res) => {
         nombre,
         correo,
         telefono,
-        mensaje
+        mensaje,
+        user_id: req.user.id
     };
     await pool.query('INSERT INTO contactos set ?', [newcontacto]);
     req.flash('success', 'Mensaje guardado satisfactoriamente');
@@ -21,7 +22,7 @@ router.post('/add', async (req, res) => {
 });
 
 router.get('/', async (req, res) => {
-    const contactos = await pool.query('SELECT * FROM contactos');    
+    const contactos = await pool.query('SELECT * FROM contactos WHERE user_id = ?', [req.user.id]);    
     res.render('contactos/list', {contactos});
 });
 
