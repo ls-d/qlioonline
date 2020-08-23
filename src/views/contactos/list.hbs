@@ -1,0 +1,27 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each contactos}}
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="card-title text-uppercase">
+                        {{nombre}}
+                    </h3>                    
+                    <p>{{correo}}</p>
+                    <p>{{telefono}}</p>
+                    <p class="m-2">{{mensaje}}</p>
+                    <p{{timeago crated_at}}></p>
+                    <a href="/contactos/delete/{{id}}" class="btn btn-danger">Borrar mensaje</a>
+                    <a href="/contactos/edit/{{id}}" class="btn btn-secondary">Editar</a>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No haz escrito ningun mensaje</p>
+                    <a href="/contactos/add">Redacta uno nuevo</a>
+                </div>
+            </div>
+        {{/each}}        
+
+    </div>
+</div>
